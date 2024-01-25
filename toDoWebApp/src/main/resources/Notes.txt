@@ -1,0 +1,99 @@
+<html>
+<head>
+<title>Web page using jsp</title>
+</head>
+<body>
+Welcome again!
+</body>
+</html>
+
+LoginController:
+
+package com.learning.springboot.toDoWebApp.login;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.ModelMap;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class LoginController {
+	
+	private Logger logger=LoggerFactory.getLogger(getClass());
+	@RequestMapping("say-login")
+	public String login(@RequestParam String name, ModelMap model) {
+		model.put("name",name);
+		System.out.println("Request param is: "+name);
+		return "login";
+	}
+	
+	@RequestMapping("Sum")
+	public String hello(@RequestParam int x, ModelMap model) {
+		model.put("s", x);
+		
+		logger.debug("RequestParam is {}",x);
+		logger.info("Print this at info level",x);
+		logger.warn("Print this at warn level");
+		System.out.println(x);
+		return "login";
+	}
+}
+
+/META-INF/resources/webjars/bootstrap/5.1.3/css/bootstrap.min.css
+
+/META-INF/resources/webjars/bootstrap/5.1.3/js/bootstrap.min.js
+
+/META-INF/resources/webjars/jquery/3.6.0/jquery.min.js
+
+insert into TODO(ID,USERNAME,DESCRIPTION,DATE,DONE)
+values(100,'Shital','Learn Springboot',CURRENT_DATE(),false);
+
+//env -environment variables
+docker run --detach 
+--env MYSQL_ROOT_PASSWORD=dummypassword  ->root password
+--env MYSQL_USER=todos-user 			 ->username
+--env MYSQL_PASSWORD=dummytodos 		 ->password
+--env MYSQL_DATABASE=todos 				 ->database
+
+--name mysql 							 -> container name
+--publish 3306:3306 					 ->published on port 3306
+
+mysql:8-oracle							 ->version
+
+insert into TODO(ID,USERNAME,DESCRIPTION,DATE,DONE)
+values(11,'Shital','Learn cloud tech',CURRENT_DATE(),false);
+
+insert into TODO(ID,USERNAME,DESCRIPTION,DATE,DONE)
+values(12,'Shital','Learn Java core',CURRENT_DATE(),false);
+
+insert into TODO(ID,USERNAME,DESCRIPTION,DATE,DONE)
+values(13,'Raj','Learn AWS now',CURRENT_DATE(),false);
+
+insert into TODO(ID,USERNAME,DESCRIPTION,DATE,DONE)
+values(14,'Raj','Learn to dance',CURRENT_DATE(),false);
+
+docker run --detach --env MYSQL_ROOT_PASSWORD=dummypassword 
+--env MYSQL_USER=todos-user1 --env MYSQL_PASSWORD=dummytodos
+ --env MYSQL_DATABASE=todos1 --name mysql2 --publish 3306:3306 mysql:8-oracle
+ 
+ @Entity
+@SequenceGenerator(name = "ToDo_SEQ", sequenceName = "ToDo_SEQ", allocationSize = 1)
+public class ToDo {
+    // other annotations and fields...
+    @Id
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "ToDo_SEQ")
+    private Long id;
+    // ...
+}
+ @Entity
+@SequenceGenerator(name = "ToDo_SEQ", sequenceName = "ToDo_SEQ", allocationSize = 1)
+public class ToDo {
+    // other annotations and fields...
+    @Id
+    
+    private Long id;
+    // ...
+}
+ 
