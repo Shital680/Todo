@@ -35,3 +35,14 @@ pom.xml
 🗑️ **Delete** : Streamline your task management by swiftly deleting any unwanted to-dos.
 
 👋 **Logout** : Wrap up your productivity session with a simple logout, ensuring your tasks are secure.
+
+## Technologies Used
+
+- **Java** : The backbone for fundamental operations, providing a solid foundation for development.
+- **Spring Boot**:  Empowering the project with a robust and streamlined framework for application development.
+- **Spring Framework** : Leveraging core components to enhance the efficiency and functionality of the application.
+- **Spring Data Jpa** : Ensuring seamless database connections and operations, simplifying data management.
+- **Spring Security** : Safeguarding the application with user authentication and authorization features.
+- **Hibernate** : Facilitating data mapping, making it easier to interact with and manage databases.
+- **Mysql** : Serving as the database backend, supporting efficient storage and retrieval of project data.
+
